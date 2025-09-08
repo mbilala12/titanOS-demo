@@ -88,6 +88,5 @@ Page Objects will prefer exact test‑ids when available (e.g., `app-tile-youtub
 ## CI
 
 A minimal GitHub Actions workflow is provided under `.github/workflows/ci.yml` to run tests and upload the Allure results as an artifact.
-the tests will fail for now as the yml file doesnt have the secrets to 
 
 ---
