@@ -18,7 +18,7 @@ jobs:
         run: npx playwright install --with-deps
       - name: Run tests (Allure)
         env:
-          TITANOS_BASE_URL: ${{ secrets.TITANOS_BASE_URL }}
+          TITANOS_BASE_URL: ${{ env.TITANOS_BASE_URL }}
         run: npm run test:allure
       - name: Upload Allure results
         if: always()
