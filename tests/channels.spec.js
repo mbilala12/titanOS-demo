@@ -1,5 +1,5 @@
 const { test } = require('@playwright/test');
-const { ChannelsPage } = require('../pages/ChannelsPage');
+const { ChannelsPage } = require('../pages/channelsPage');
 
 test.describe('Channels — Page is usable', () => {
 

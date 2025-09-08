@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const { SearchPage } = require('../pages/SearchPage');
+const { SearchPage } = require('../pages/searchPage');
 const data = require('../locators/testData');
 
 test.describe('Search — Open category', () => {

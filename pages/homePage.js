@@ -1,6 +1,6 @@
 const { expect } = require('@playwright/test');
 const testIds = require('../locators/testIds');
-const { FavouritesRow } = require('../components/FavouritesRow');
+const { FavouritesRow } = require('../components/favouritesRow');
 const { rc } = require('../utils/rc');
 
 class HomePage {
