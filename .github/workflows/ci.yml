@@ -1,0 +1,28 @@
+name: Playwright Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install deps
+        run: npm ci
+      - name: Install browsers
+        run: npx playwright install --with-deps
+      - name: Run tests (Allure)
+        env:
+          TITANOS_BASE_URL: ${{ secrets.TITANOS_BASE_URL }}
+        run: npm run test:allure
+      - name: Upload Allure results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results
+          path: allure-results

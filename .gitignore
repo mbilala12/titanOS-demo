@@ -1,0 +1,14 @@
+# dependencies
+node_modules/
+
+# Playwright
+playwright-report/
+test-results/
+*.log
+
+# Allure
+allure-results/
+allure-report/
+
+# envs
+.env
